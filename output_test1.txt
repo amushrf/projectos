@@ -1,0 +1,190 @@
+1: System configuration
+Time set to 3, was 1
+3: Job arrival
+Job 1 placed in ready queue
+Job 1 placed on the CPU
+Time set to 4, was 3
+4: Job arrival
+Job 2 placed in ready queue
+Time set to 5, was 4
+5: Job arrival
+Job 3 placed in hold queue 1
+Time set to 7, was 5
+7: Quantum ended
+Job 1 placed in ready queue
+Job 2 placed on the CPU
+Time set to 7, was 7
+7: Job arrival
+Job 4 rejected due to insufficient total system resources.
+Time set to 8, was 7
+8: Job arrival
+Job 5 placed in ready queue
+Time set to 10, was 8
+10: Display system status
+============================================= Jobs ==============================================
+-------------------------------------------------------------------------------------------------
+| # | State        | Time Remaining | Turnaround Time (Unweighted) | Turnaround Time (Weighted) |
+-------------------------------------------------------------------------------------------------
+| 5 | Ready queue  | 4              |                              |                            |
+| 3 | Hold queue 1 | 4              |                              |                            |
+| 2 | CPU          | 9              |                              |                            |
+| 1 | Ready queue  | 6              |                              |                            |
+-------------------------------------------------------------------------------------------------
+=== Hold Queue 1 ===
+--------
+| Jobs |
+--------
+| 3    |
+--------
+=== Hold Queue 2 ===
+--------
+| Jobs |
+--------
+--------
+=== Long Queue ===
+--------
+| Jobs |
+--------
+--------
+=== Ready Queue ===
+--------
+| Jobs |
+--------
+| 1    |
+| 5    |
+--------
+=== Device Wait Queue ===
+--------
+| Jobs |
+--------
+--------
+=== Complete Queue ===
+--------
+| Jobs |
+--------
+--------
+
+Time set to 11, was 10
+11: Quantum ended
+Job 2 placed in ready queue
+Job 1 placed on the CPU
+Time set to 15, was 11
+15: Quantum ended
+Job 1 placed in ready queue
+Job 5 placed on the CPU
+Time set to 19, was 15
+19: Quantum ended
+Job 5 is complete, so release memory and devices
+Job 5 placed in complete queue
+Job 2 placed on the CPU
+Time set to 23, was 19
+23: Quantum ended
+Job 2 placed in ready queue
+Job 1 placed on the CPU
+Time set to 25, was 23
+25: Quantum ended
+Job 1 is complete, so release memory and devices
+Job 1 placed in complete queue
+Job 3 placed in ready queue
+Job 2 placed on the CPU
+Time set to 25, was 25
+25: Display system status
+================================================= Jobs =================================================
+--------------------------------------------------------------------------------------------------------
+| # | State               | Time Remaining | Turnaround Time (Unweighted) | Turnaround Time (Weighted) |
+--------------------------------------------------------------------------------------------------------
+| 5 | Complete at time 19 |                | 11                           | 2.750000                   |
+| 3 | Ready queue         | 4              |                              |                            |
+| 2 | CPU                 | 4              |                              |                            |
+| 1 | Complete at time 25 |                | 22                           | 2.200000                   |
+--------------------------------------------------------------------------------------------------------
+=== Hold Queue 1 ===
+--------
+| Jobs |
+--------
+--------
+=== Hold Queue 2 ===
+--------
+| Jobs |
+--------
+--------
+=== Long Queue ===
+--------
+| Jobs |
+--------
+--------
+=== Ready Queue ===
+--------
+| Jobs |
+--------
+| 3    |
+--------
+=== Device Wait Queue ===
+--------
+| Jobs |
+--------
+--------
+=== Complete Queue ===
+--------
+| Jobs |
+--------
+| 5    |
+| 1    |
+--------
+
+Time set to 29, was 25
+29: Quantum ended
+Job 2 is complete, so release memory and devices
+Job 2 placed in complete queue
+Job 3 placed on the CPU
+Time set to 33, was 29
+33: Quantum ended
+Job 3 is complete, so release memory and devices
+Job 3 placed in complete queue
+Time set to 9999, was 33
+9999: Display system status
+================================================= Jobs =================================================
+--------------------------------------------------------------------------------------------------------
+| # | State               | Time Remaining | Turnaround Time (Unweighted) | Turnaround Time (Weighted) |
+--------------------------------------------------------------------------------------------------------
+| 5 | Complete at time 19 |                | 11                           | 2.750000                   |
+| 3 | Complete at time 33 |                | 28                           | 7.000000                   |
+| 2 | Complete at time 29 |                | 25                           | 2.083333                   |
+| 1 | Complete at time 25 |                | 22                           | 2.200000                   |
+--------------------------------------------------------------------------------------------------------
+=== Hold Queue 1 ===
+--------
+| Jobs |
+--------
+--------
+=== Hold Queue 2 ===
+--------
+| Jobs |
+--------
+--------
+=== Long Queue ===
+--------
+| Jobs |
+--------
+--------
+=== Ready Queue ===
+--------
+| Jobs |
+--------
+--------
+=== Device Wait Queue ===
+--------
+| Jobs |
+--------
+--------
+=== Complete Queue ===
+--------
+| Jobs |
+--------
+| 5    |
+| 1    |
+| 2    |
+| 3    |
+--------
+System average unweighted turnaround: 21.5
+System average weighted turnaround: 3.50833

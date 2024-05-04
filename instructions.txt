@@ -1,0 +1,29 @@
+CS641 - Operating Systems Project
+Spring 2024
+Prof. Maher Khemakhem
+Students:
+2401615 - Ahmed Almusharraf
+2301317 - Osama Aljuhani
+2403854 - Fahad Farooq Jamie
+
+The entire project has been written in C++. All the dependencies have been encoded into the makefile, which serves as a one-click solution to compile the entire project.
+
+The compilation is simple;
+
+On any UNIX based machine, using make, the project can be compiled.
+
+Navigate to the folder containing the project source using shell, and simply run;
+
+make
+
+Once this command is run, the project will be compiled and an executable will be produced, named "project_cs641".
+
+To run the executable, simply type the following command:
+
+./project_cs641 "input_file.txt" //Replace input_file with the name of the input file you are using.
+
+The program will run and provide all the required details, such as workaround time, scheduling etc.
+
+To clean up the folder, run:
+
+make clean
